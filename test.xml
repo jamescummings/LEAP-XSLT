@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:///home/jamesc/svn/research.it/LEAP/leap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="file:///home/jamesc/svn/research.it/LEAP/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="transcription-jc.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LETT1353">
+    <teiHeader>
+      <fileDesc>
+            <titleStmt>
+                <title>Letter to Horace Waller</title>
+                <author xml:id="DL">David Livingstone</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Livingstone Online</authority>
+                <pubPlace>London, UK</pubPlace>
+                <publisher>University College London</publisher>
+                <date>2012</date>
+            </publicationStmt>
+            <sourceDesc>
+            <bibl xml:id="shelfmark">Bodleian Library of Commonwealth and African Studies at Rhodes House, MSS.Afr.s.16/1, fol. 30-31</bibl>
+            <bibl xml:id="ccnumber">1353</bibl>
+            <bibl xml:id="recipient">Horace Waller</bibl>
+            <bibl xml:id="date">30 May 1863</bibl>
+            <bibl xml:id="where">Unknown</bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change> 
+                <date>2011-12-01</date> 
+                <name xml:id="AJS">A.J. Schmitz</name> initial transcription and XML encoding.
+            </change>
+            <change> 
+                <date>2012-02-04</date> 
+                <name xml:id="JM">Jared McDonald</name> proofreading.
+            </change>
+            <change> 
+                <date>2012-02-04</date> 
+                <name xml:id="AW">Adrian S. Wisnicki</name> editing.
+            </change>
+            <change> 
+                <date>2012-09-25</date> 
+                <name xml:id="HFB">Heather F. Ball</name> second XML editing.
+            </change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text>
+        <body>
+            <div>
+                
+                
+            <pb n="30r"/>
+            <lb n="1"/>
+            <p rend="right">
+               <date when="1863-05-30">Saturday 30 May 
+<lb n="2"/>1863</date>
+            </p>
+            <lb n="3"/>
+            <p>My Dear <persName>
+                  <choice>
+                     <abbr>HW</abbr>
+                     <expan>Horace Waller</expan>
+                  </choice>
+               </persName>
+            </p>
+            <lb n="4"/>
+            <p>We send 
+<lb n="5"/>back the books with  
+<lb n="6"/>many thanks for 
+<lb n="7"/>the use <space extent="5" unit="chars"/>of them. 
+<lb n="8"/>they are somewhat 
+<lb n="9"/>damaged <space extent="5" unit="words"/> by cockroaches
+<lb n="10"/>and one is not 
+<lb n="11"/>at hand, possibly 
+<lb n="12"/>it may hence gone 
+<lb n="13"/>down - I mean 
+<lb n="14"/>the volume of "All 
+<lb n="15"/>the year round<supplied>"</supplied> 
+
+               <pb n="30v"/>
+               <lb n="1"/>I retain <persName>Keble</persName> for 
+<lb n="2"/>a little longer.</p>
+            <lb n="3"/>
+            <p>I am sorry that 
+<lb n="4"/>you did not 
+<lb n="5"/>succeed according 
+<lb n="6"/>to all our wishes 
+<lb n="7"/>and your own 
+<lb n="8"/>I guess you uttered 
+<lb n="9"/>some of your 
+<lb n="10"/>terrific puns on 
+<lb n="11"/>the way &amp; made 
+<lb n="12"/>
+               <persName>Procter</persName> ill. I 
+<lb n="13"/>escaped relapse 
+<lb n="14"/>myself by holding 
+
+    <pb n="31r"/>
+               <lb n="1"/>in my breath as 
+<lb n="2"/>I read them. send 
+<lb n="3"/>a few more I wish 
+<lb n="4"/>to try if they will 
+<lb n="5"/>exorcise the cockroaches 
+<lb n="6"/>Better luck next 
+<lb n="7"/>time for you all 
+<lb n="8"/>I hope <persName>Meller</persName> will 
+<lb n="9"/>cure <persName>Procter</persName> as 
+<lb n="10"/>quickly as he did 
+<lb n="11"/>his own case. 
+<lb n="12"/>Yesterday for 
+<lb n="13"/>the first time 
+<lb n="14"/>I walked a little 
+
+    <pb n="31v"/>
+               <lb n="1"/>without feeling as 
+<lb n="2"/>if I should faint 
+<lb n="3"/>this may be the 
+<lb n="4"/>effects of the iron 
+<lb n="5"/>which I have taken 
+<lb n="6"/>three times.</p> 
+            <lb n="7"/>
+            <p>With good wishes 
+<lb n="8"/>for you all I am &amp;c</p>
+            <lb n="9"/>
+            <p rend="center">
+               <persName>
+                  <choice>
+                     <abbr>DL</abbr>
+                     <expan>David Livingstone</expan>
+                  </choice>
+               </persName> His Mark <!-- here DL draws a little Cross AJS 12/1 --></p>
+
+
+            </div>
+        </body>
+    </text>
+
+</TEI>

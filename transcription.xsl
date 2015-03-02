@@ -11,13 +11,13 @@
             <xd:p><xd:b>First created on:</xd:b> Dec 1, 2014</xd:p>
             <xd:p><xd:b>Author:</xd:b> jamesc</xd:p>
             <xd:p>First attempt at LEAP to HTML conversion</xd:p>
-            <xd:p>Updated in Feb 2015.</xd:p>
+            <xd:p>Updated in Feb/Mar 2015.</xd:p>
         </xd:desc>
     </xd:doc>
 <xsl:output method="xml" indent="yes" />
 
     <!-- general match -->
-    <xsl:template match="*" priority="-10"><span class="{name()}"><xsl:if test="@*"><xsl:attribute name="title"><xsl:value-of select="concat(name(), ':  ')"/><xsl:for-each select="@*"><xsl:sort/><xsl:value-of select="concat(name(),': ', ., '; ')"/></xsl:for-each></xsl:attribute></xsl:if><xsl:comment>JC</xsl:comment><xsl:apply-templates /></span></xsl:template>
+    <xsl:template match="*" priority="-10"><span class="{name()}"><xsl:if test="@*"><xsl:attribute name="title"><xsl:value-of select="concat(name(), ':  ')"/><xsl:for-each select="@*"><xsl:sort/><xsl:value-of select="concat(name(),': ', ., '; ')"/></xsl:for-each></xsl:attribute></xsl:if><xsl:apply-templates /></span></xsl:template>
     
     <!-- make rend class -->
     <xsl:template match="*/@rend"><xsl:attribute name="class"><xsl:value-of select="translate(., '-', '')"/></xsl:attribute></xsl:template> 

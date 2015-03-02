@@ -34,7 +34,7 @@
     <script type="text/javascript">
         
         $(document).ready(function(){
-        $('a#button').click(function(){
+        $('button#toggle').click(function(){
         $('.diplomatic').toggleClass("hidden");
         $('.edited').toggleClass("hidden");
         });
@@ -45,7 +45,7 @@
 </head>
             <body>
                 <h2><xsl:value-of select="//teiHeader//title[1]"/></h2>
-                <a id="button" title="button" href="#">Toggle</a>
+                <button id="toggle" title="toggle" type="button">Toggle</button>
                 <xsl:apply-templates/>
             </body> 
         </html>

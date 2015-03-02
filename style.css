@@ -15,13 +15,16 @@ font-family:calibri, arial, helvetica, sans-serif;
 .orig{border-bottom:1px red dotted}
 
 .pb-title{font-weight:bold;text-align:center;display:block;margin-left:auto;margin-right:auto;}
-p.centered{margin-left:auto;margin-right:auto;}
+p.center{margin-left:auto;margin-right:auto;}
 p.right {margin-left:60%;}
 p{margin-left:5%;}
 
 table, tr, td {border-style:none;}
 
 /**place= above, below, bottom, end, inline, inspace, marginleft, margineright, margintop, marginbottom, top **/
+
+
+.hidden{display:none;}
 
 
 /** @rend classes */

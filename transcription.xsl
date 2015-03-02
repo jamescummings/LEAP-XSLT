@@ -29,9 +29,22 @@
 <head>
     <title><xsl:value-of select="//teiHeader//title[1]"/></title>
     <link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/jamescummings/LEAP-XSLT/master/style.css"/>
+    <script src="http://infodev.oucs.ox.ac.uk/vmo/jquery-tooltip/lib/jquery.js" type="text/javascript"><!--...--></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+        $('a#button').click(function(){
+        $(.diplomatic).toggleClass("hidden");
+        $(.edited).toggleClass("hidden");
+        });
+        });
+        
+    </script>
+    
 </head>
             <body>
                 <h2><xsl:value-of select="//teiHeader//title[1]"/></h2>
+                <a id="button" title="button">Toggle</a>
                 <xsl:apply-templates/>
             </body> 
         </html>
@@ -78,19 +91,19 @@
         <span class="abbr diplomatic"><xsl:if test="../expan"><xsl:attribute name="title">expan: <xsl:value-of select="../expan"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>
     </xsl:template>
     <xsl:template match="choice/expan">
-        <span class="expan normalized"><xsl:if test="../abbr"><xsl:attribute name="title"><xsl:value-of select="../abbr"/></xsl:attribute></xsl:if>abbr: <xsl:apply-templates/></span>
+        <span class="expan edited hidden"><xsl:if test="../abbr"><xsl:attribute name="title"><xsl:value-of select="../abbr"/></xsl:attribute></xsl:if>abbr: <xsl:apply-templates/></span>
     </xsl:template>
     <xsl:template match="choice/orig">
         <span class="orig diplomatic"><xsl:if test="../reg"><xsl:attribute name="title">reg: <xsl:value-of select="../reg"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>
     </xsl:template>
     <xsl:template match="choice/reg">
-        <span class="reg normalized"><xsl:if test="../orig"><xsl:attribute name="title">orig: <xsl:value-of select="../orig"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>
+        <span class="reg edited hidden"><xsl:if test="../orig"><xsl:attribute name="title">orig: <xsl:value-of select="../orig"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>
     </xsl:template>
     <xsl:template match="choice/sic">
-        <span class="sic diplomatic"><xsl:if test="../corr"><xsl:attribute name="title">corr: <xsl:value-of select="../corr"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>
+        <span class="sic diplomatic "><xsl:if test="../corr"><xsl:attribute name="title">corr: <xsl:value-of select="../corr"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>
     </xsl:template>
     <xsl:template match="choice/corr">
-        <span class="corr normalized"><xsl:if test="../sic"><xsl:attribute name="title">sic: <xsl:value-of select="../sic"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>
+        <span class="corr edited hidden"><xsl:if test="../sic"><xsl:attribute name="title">sic: <xsl:value-of select="../sic"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>
     </xsl:template>
     
     

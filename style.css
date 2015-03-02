@@ -20,3 +20,66 @@ p.right {margin-left:60%;}
 p{margin-left:5%;}
 
 table, tr, td {border-style:none;}
+
+/**place= above, below, bottom, end, inline, inspace, marginleft, margineright, margintop, marginbottom, top **/
+
+
+/** @rend classes */
+ 
+.caps{font-variant: small-caps;} 
+.center{text-align:center; margin-left:auto; margin-right:auto;}  
+.doubleline{border-bottom: 3px double;} 
+.doubleunderline{border-bottom: 3px double;} 
+.halfline{} 
+.indent{margin-left:+20%;} 
+.italic{font-style:italic;} 
+.large{font-size:120%;} 
+.left{float:left; margin-left:15%;} 
+.line{} 
+.noindent{margin-left:0%;} 
+.other{} 
+.quarterline{} 
+.right{float:right; margin-right:15%;} 
+
+.above, .below, .sub, .sup {
+  /* Specified in % so that the sup/sup is the
+     right size relative to the surrounding text */
+  font-size: 75%;
+
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+}
+
+.above, .sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+}
+
+.below, .sub {
+  /* Move the subscripted text down, but only
+     half as far down as the superscript moved up */
+  bottom: -0.25em;}
+
+
+.small{font-size:80%;} 
+.smallcaps{font-variant: small-caps;} 
+.tripleline{} 
+.underline{text-decoration: underline;} 
+.upsidedown{} 
+.vertical{} 
+.black{color:black;} 
+.blue{color:blue;} 
+.brown{color:brown;} 
+.gray{color:gray;} 
+.green{color:green;} 
+.red{color:red;}
+ 

@@ -27,9 +27,10 @@
     <xsl:template match="/">
         <html> <xsl:comment>This HTML has been generated from an XML original. Do not manually modify this as a source.</xsl:comment>
 <head>
+    <meta charset="UTF-8" />
     <title><xsl:value-of select="//teiHeader//title[1]"/></title>
     <link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/jamescummings/LEAP-XSLT/master/style.css"/>
-    <script src="http://infodev.oucs.ox.ac.uk/vmo/jquery-tooltip/lib/jquery.js" type="text/javascript"><!--...--></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"><xsl:comment> ... </xsl:comment></script>
     <script type="text/javascript">
         
         $(document).ready(function(){

@@ -45,7 +45,7 @@
 </head>
             <body>
                 <h2><xsl:value-of select="//teiHeader//title[1]"/></h2>
-                <a id="button" title="button">Toggle</a>
+                <a id="button" title="button" href="#">Toggle</a>
                 <xsl:apply-templates/>
             </body> 
         </html>

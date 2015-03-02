@@ -35,8 +35,8 @@
         
         $(document).ready(function(){
         $('a#button').click(function(){
-        $(.diplomatic).toggleClass("hidden");
-        $(.edited).toggleClass("hidden");
+        $('.diplomatic').toggleClass("hidden");
+        $('.edited').toggleClass("hidden");
         });
         });
         

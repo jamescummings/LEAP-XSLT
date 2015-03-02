@@ -28,7 +28,7 @@
         <html> <xsl:comment>This HTML has been generated from an XML original. Do not manually modify this as a source.</xsl:comment>
 <head>
     <title><xsl:value-of select="//teiHeader//title[1]"/></title>
-    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/jamescummings/LEAP-XSLT/master/style.css"/>
 </head>
             <body>
                 <xsl:apply-templates/>

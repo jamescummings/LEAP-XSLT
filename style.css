@@ -80,9 +80,111 @@ table, tr, td {border-style:none;}
 .upsidedown{} 
 .vertical{} 
 .black{color:black;} 
-.blue{color:blue;} 
+.blue{color:blue;}  
 .brown{color:brown;} 
 .gray{color:gray;} 
 .green{color:green;} 
 .red{color:red;}
  
+ 
+ 
+ 
+ /** elements **/
+ 
+ .space{border-bottom: 1px dotted black;}
+ .del{text-decoration: line-through;}
+ .cancelled{border-bottom: 1px solid black;}
+ 
+ 
+.w {}
+.add {}
+.address {display:block;}
+.date 
+.desc
+.editor
+.foreign
+.hi
+.imprint
+.label 
+.measure 
+.measureGrp 
+.name  
+.addName 
+.forename 
+.geogFeat 
+.geogName  
+.orgName 
+.persName 
+.placeName 
+.roleName 
+.surname
+.fw
+.q 
+.quote
+
+.term
+.note {display:block;}
+.gap 
+.desc 
+.gloss
+.seg
+.damage 
+.unclear
+
+.monogr 
+.addrLine 
+.author 
+.bibl {display:block;} 
+.biblScope 
+.date 
+.pubPlace 
+.publisher 
+.title
+
+.quote {display:block;} 
+.TEI {display:block;}
+.back {display:block;}
+.body {display:block;}
+.p {display:block;}
+.ab {display:block;}
+.closer {display:block;}
+.dateline{display:block;} 
+.div {display:block;}
+.front {display:block;}
+
+
+.ref, a {text-decoration:none; font-weight:bold; }
+
+.head 
+
+.item {}
+.label {} 
+
+.cb {}
+.gb {}
+.lb {}
+.milestone {display:block; width:100%; border-bottom:2px solid black;} 
+.pb {display:block;}
+
+.graphic {}
+.figure {}
+.table, table {} 
+.row, tr {}
+.cell, td {}
+.anchor {}
+.app {}
+.rdg  {display:block;}                         
+.addSpan {}
+.damageSpan {}
+.delSpan {}
+.handShift {}
+.metamark {}
+.mod {}
+.redo {}
+.restore {}
+.retrace {}
+.subst {}
+.supplied {}
+.surplus {}
+.transpose {}
+.undo  {}

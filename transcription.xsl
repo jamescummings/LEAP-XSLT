@@ -23,17 +23,18 @@
     <xsl:template match="*/@rend"><xsl:attribute name="class"><xsl:value-of select="translate(., '-', '')"/></xsl:attribute></xsl:template> 
     
 
-    <!-- When not producing full HTML files, this template could be removed. -->
+    <!-- When not producing full HTML files, this template could be removed but javascript and CSS will need to be copied to correct location. -->
     <xsl:template match="/">
         <html> <xsl:comment>This HTML has been generated from an XML original. Do not manually modify this as a source.</xsl:comment>
 <head>
     <meta charset="UTF-8" />
     <title><xsl:value-of select="//teiHeader//title[1]"/></title>
-    <link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/jamescummings/LEAP-XSLT/master/style.css"/>
+    <link type="text/css" rel="stylesheet" href="http://jamescummings.github.io/LEAP/style.css"/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"><xsl:comment> ... </xsl:comment></script>
     <script type="text/javascript">
         
         $(document).ready(function(){
+        $('button#toggle').removeClass("hidden");
         $('button#toggle').click(function(){
         $('.diplomatic').toggleClass("hidden");
         $('.edited').toggleClass("hidden");
@@ -45,7 +46,7 @@
 </head>
             <body>
                 <h2><xsl:value-of select="//teiHeader//title[1]"/></h2>
-                <button id="toggle" title="toggle" type="button">Toggle</button>
+                <button id="toggle" title="toggle" type="button" class="hidden">Toggle</button>
                 <xsl:apply-templates/>
             </body> 
         </html>
@@ -116,6 +117,20 @@
         <xsl:otherwise><span class="space" title="{concat(name(), ':  ', @extent, ' ', @unit, ' ', @agent)}"><xsl:for-each select="1 to @extent">&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;</xsl:for-each></span></xsl:otherwise>
     </xsl:choose></xsl:template>
     
+    
+    <xsl:template match="del[@type='cancelled']"><span class="del cancelled"><xsl:if test="@*"><xsl:attribute name="title"><xsl:value-of select="concat(name(), ':  ')"/><xsl:for-each select="@*"><xsl:sort/><xsl:value-of select="concat(name(),': ', ., '; ')"/></xsl:for-each></xsl:attribute></xsl:if><xsl:apply-templates /></span></xsl:template>
+    
+    <xsl:template match="table"><table><xsl:apply-templates select="@*|node()"/></table></xsl:template>
+    <xsl:template match="row"><tr><xsl:apply-templates select="@*|node()"/></tr></xsl:template>
+    <xsl:template match="cell"><td><xsl:apply-templates select="@*|node()"/></td></xsl:template>
+    
+    <xsl:template match="figure"><span class="figure" title="{concat(head, ';  ', figDesc)}">[Illustration] <xsl:apply-templates/></span></xsl:template>
+    <xsl:template match="figure/head|figure/figDesc"/>
+        
+    <xsl:template match="supplied"><span class="supplied">[<xsl:apply-templates select="node()"/>]</span></xsl:template>
+    
+    
+    
     <!-- 
 
 @place= 
@@ -124,7 +139,7 @@ below shrinking lower
 marginleft float
 marginright
 over-text =  possible to add over previous text? or add in regular text, deleted word next it crossed out.
-
+n
 add:
 
 del: strikethrough single line, cancelled is multiple lines? possible?

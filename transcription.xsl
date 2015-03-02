@@ -30,7 +30,7 @@
     <meta charset="UTF-8" />
     <title><xsl:value-of select="//teiHeader//title[1]"/></title>
     <link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/jamescummings/LEAP-XSLT/master/style.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"><xsl:comment> ... </xsl:comment></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"><xsl:comment> ... </xsl:comment></script>
     <script type="text/javascript">
         
         $(document).ready(function(){

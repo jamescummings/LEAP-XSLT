@@ -31,6 +31,7 @@
     <link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/jamescummings/LEAP-XSLT/master/style.css"/>
 </head>
             <body>
+                <h2><xsl:value-of select="//teiHeader//title[1]"/></h2>
                 <xsl:apply-templates/>
             </body> 
         </html>

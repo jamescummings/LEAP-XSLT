@@ -92,7 +92,7 @@
         <span class="abbr diplomatic"><xsl:if test="../expan"><xsl:attribute name="title">expan: <xsl:value-of select="../expan"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>
     </xsl:template>
     <xsl:template match="choice/expan">
-        <span class="expan edited hidden"><xsl:if test="../abbr"><xsl:attribute name="title"><xsl:value-of select="../abbr"/></xsl:attribute></xsl:if>abbr: <xsl:apply-templates/></span>
+        <span class="expan edited hidden"><xsl:if test="../abbr"><xsl:attribute name="title"><xsl:value-of select="../abbr"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>
     </xsl:template>
     <xsl:template match="choice/orig">
         <span class="orig diplomatic"><xsl:if test="../reg"><xsl:attribute name="title">reg: <xsl:value-of select="../reg"/></xsl:attribute></xsl:if><xsl:apply-templates/></span>

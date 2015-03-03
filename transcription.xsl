@@ -130,7 +130,7 @@
     <xsl:template match="supplied"><span class="supplied">[<xsl:apply-templates select="node()"/>]</span></xsl:template>
     
     
-<xsl:template match="milestone"><hr class="milestone"/></xsl:template>    
+    <xsl:template match="milestone"><hr class="milestone"><xsl:if test="@*"><xsl:attribute name="title"><xsl:value-of select="concat(name(), ':  ')"/><xsl:for-each select="@*"><xsl:sort/><xsl:value-of select="concat(name(),': ', ., '; ')"/></xsl:for-each></xsl:attribute></xsl:if></hr></xsl:template>    
     <!-- 
 
 @place= 

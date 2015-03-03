@@ -130,7 +130,7 @@
     <xsl:template match="supplied"><span class="supplied">[<xsl:apply-templates select="node()"/>]</span></xsl:template>
     
     
-    
+<xsl:template match="milestone"><hr class="milestone"/></xsl:template>    
     <!-- 
 
 @place= 

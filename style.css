@@ -163,7 +163,7 @@ table, tr, td {border-style:none;}
 .cb {}
 .gb {}
 .lb {}
-.milestone {display:block; width:100%; border-bottom:2px solid black;} 
+.milestone {display:block; width:100%; border-bottom:2px solid black; margin-left:auto; margin-right:auto;} 
 .pb {display:block;}
 
 .graphic {}

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:tei="http://www.tei-c.org/ns/1.0"
-  xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="xs xd tei" version="2.0">
+  xmlns:jc="http://james.blushingbunny.net/ns.html"
+  xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="xs xd tei jc" version="2.0">
   <xd:doc scope="stylesheet">
     <xd:desc>
       <xd:p><xd:b>First created on:</xd:b> Dec 1, 2014</xd:p>
@@ -12,6 +13,13 @@
   </xd:doc>
   <xsl:output method="xml" indent="yes"/>
 
+<!-- Incoming parameters -->
+<xsl:param name="page" select="'0001'"/>
+<xsl:param name="paged" select="'true'"/>
+
+<!-- transform these to global variables in case I need to use them anywhere -->
+<xsl:variable name="pagenumber" select="$page"/>  
+<xsl:variable name="isPaged" select="$paged"/>  
 
   <!-- When not producing full HTML files, this template could be removed but javascript and CSS will need to be copied to correct location. -->
   <xsl:template match="/">
@@ -38,12 +46,8 @@
         </script>
         
       </head>
-      <body>
-        <h2>
-          <xsl:value-of select="//teiHeader//title[1]"/>
-        </h2>
-        <xsl:apply-templates/>
-      </body>
+      <xsl:apply-templates select="TEI"/>
+      
     </html>
   </xsl:template>
   
@@ -52,10 +56,19 @@
   
   
   <xsl:template match="TEI">
-    <div class="TEI">
-      <button id="toggle" title="toSggle" type="button" class="hidden">Toggle Diplomatic/Edited</button>
-      <xsl:apply-templates select="text"/>
-    </div>
+    <body>
+      <button id="toggle" title="toggle" type="button" class="hidden">Toggle Diplomatic/Edited</button>
+      <h2>
+        <xsl:value-of select="//teiHeader//title[1]"/>
+      </h2>
+      <div class="TEI">
+    <xsl:choose>
+      <xsl:when test="$isPaged='true'"><xsl:apply-templates select="//jc:page[@n=$pagenumber]"/></xsl:when>
+    <xsl:otherwise><xsl:apply-templates select="text"/></xsl:otherwise>
+    </xsl:choose>
+      </div>
+    </body>
+    
   </xsl:template>
   
   <!-- general match -->
@@ -309,10 +322,19 @@
   </xsl:template>
 
 
+<xsl:template match="jc:page">
+<div class="page">
+  <hr/>
+  <span class="pb-title">Image: <xsl:value-of select="@n"/></span>
+<xsl:apply-templates/>  
+  </div>
+</xsl:template>
+  
   <xsl:template match="pb">
     <hr/>
     <span class="pb-title">Image: <xsl:value-of select="@n"/></span>
   </xsl:template>
+  
   
 
 

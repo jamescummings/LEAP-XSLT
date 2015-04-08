@@ -22,7 +22,11 @@ Licensed CC+SA 3.0
 
 <xsl:template match="/">
   <xsl:comment>This file has been modified from its original by 
-    https://github.com/jamescummings/LEAP-XSLT/blob/master/LEAP-processpb.xsl </xsl:comment><xsl:text>
+    https://github.com/jamescummings/LEAP-XSLT/blob/master/LEAP-processpb.xsl 
+  with added 'page' elements in a non-TEI namespace. This file will no longer 
+  validate against the LEAP schema and is for display purposes only.  
+    
+  </xsl:comment><xsl:text>
 
   </xsl:text>
   <xsl:apply-templates/>

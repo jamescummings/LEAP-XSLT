@@ -21,7 +21,8 @@ Licensed CC+SA 3.0
   <xsl:template match="processing-instruction()"/>
 
 <xsl:template match="/">
-  <xsl:comment>This file has been modified from its original by https://github.com/jamescummings/LEAP-XSLT/blob/master/LEAP-processpb.xsl </xsl:comment><xsl:text>
+  <xsl:comment>This file has been modified from its original by 
+    https://github.com/jamescummings/LEAP-XSLT/blob/master/LEAP-processpb.xsl </xsl:comment><xsl:text>
 
   </xsl:text>
   <xsl:apply-templates/>

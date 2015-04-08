@@ -58,6 +58,17 @@
                <date when="1863-05-30">Saturday 30 May 
 <lb n="2"/>1863</date>
             </p>
+              
+              <ab>test ab</ab>
+              
+              <p rend="no-indent">No-indent p</p>
+              
+              <p>In this paragraph theres is some <foreign xml:lang="la">foreign text here</foreign></p>
+              <p>There is an addition here: <add place="marginleft">Some added text in margin left.</add></p>
+              <p>There is an addition here: <add place="marginright">Some added text in margin right.</add></p>
+              <p>There is an addition here: <add place="margintop">Some added text in margin top.</add></p>
+              <p>There is an addition here: <add place="marginbottom">Some added text in margin bottom.</add></p>
+              
             <lb n="3"/>
             <p>My Dear <persName>
                   <choice>
@@ -66,6 +77,8 @@
                   </choice>
                </persName>
             </p>
+              <milestone unit="line" rend="half-line"/>
+              <p>There is an addition here: <add place="margintop">Some more added text in margin top.</add></p>
             <lb n="4"/>
             <p>We send 
 <lb n="5"/>back the books with  
@@ -80,6 +93,7 @@
 <lb n="14"/>the volume of "All 
 <lb n="15"/>the year round<supplied>"</supplied> 
 
+<hi rend="upsidedown">For some reason there is some vertical text here.</hi>
                <pb n="30v"/>
                <lb n="1"/>I retain <persName>Keble</persName> for 
 <lb n="2"/>a little longer.</p>

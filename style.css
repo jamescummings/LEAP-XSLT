@@ -1,7 +1,7 @@
 body {
-margin-left:30%; 
-margin-right: 20%;
-width:45%;
+margin-left:auto; 
+margin-right: auto;
+width:70%;
 
 font-family:calibri, arial, helvetica, sans-serif;
 }
@@ -15,13 +15,14 @@ font-family:calibri, arial, helvetica, sans-serif;
 .sic, .corr{border-bottom:1px red dotted}
 
 .pb-title{font-weight:bold;text-align:center;display:block;margin-left:auto;margin-right:auto;}
-p.center{margin-left:auto;margin-right:auto;}
-p.right {margin-left:60%;}
+p.center{margin-left:auto;margin-right:auto; width:50%; text-align:left;}
+p.right {float:right; clear:both; width: 50%; text-align:left;}
 p{margin-left:5%;}
+p.ab, p.noindent {margin-left:-5%;}
 
 table, tr, td {border-style:none;}
 
-/**place= above, below, bottom, end, inline, inspace, marginleft, margineright, margintop, marginbottom, top **/
+
 
 
 .hidden{display:none;}
@@ -30,19 +31,25 @@ table, tr, td {border-style:none;}
 /** @rend classes */
  
 .caps{font-variant: small-caps;} 
-.center{text-align:center; margin-left:auto; margin-right:auto;}  
-.doubleline{border-bottom: 3px double;} 
+.center{margin-left:auto; margin-right:auto; width: 70%;}  
 .doubleunderline{border-bottom: 3px double;} 
-.halfline{} 
+.quarterline{border-bottom: 1px solid; display:block; width:25%!important; margin-left:0px!important; text-align:left;}
+.doubleline{border-bottom: 3px double; display:block; width:50%;margin-left:auto;margin-right:auto;}
+.tripleline{border-bottom: 3px double;
+	line-height: 1.9em; display:block; width:50%;margin-left:auto;margin-right:auto;} 
+.halfline{border-bottom: 1px solid; display:block; width:50%!important; margin-left:0px!important; text-align:left;} 
+.line{border-bottom: 1px solid #d0d0d0; display:block; width:90%; margin-left:auto;margin-right:auto;}
+
+
 .indent{margin-left:+20%;} 
 .italic{font-style:italic;} 
 .large{font-size:120%;} 
 .left{float:left; margin-left:15%;} 
-.line{} 
+ 
 .noindent{margin-left:0%;} 
 .other{} 
-.quarterline{} 
-.right{float:right; margin-right:15%;} 
+ 
+.right{float:right; margin-right:15%; width: 50%; text-align:left;} 
 
 .above, .below, .sub, .sup {
   /* Specified in % so that the sup/sup is the
@@ -72,13 +79,29 @@ table, tr, td {border-style:none;}
      half as far down as the superscript moved up */
   bottom: -0.25em;}
 
+/**place= above, below, bottom, end, inline, inspace, marginleft, margineright, margintop, marginbottom, top **/
+
+.marginLeft{width:20%; float:left; margin-left:-25%;margin-right:10px; clear:left;  color:red;}
+.marginRight{width:20%; float:right; margin-right:5%; clear:right;  color:red;}
+/* Too difficult for now inside target framework*/
+.marginTop{}
+.marginBottom{}
 
 .small{font-size:80%;} 
 .smallcaps{font-variant: small-caps;} 
-.tripleline{} 
 .underline{text-decoration: underline;} 
-.upsidedown{} 
-.vertical{} 
+.upsidedown{
+  -ms-transform:rotate(180deg); /* IE 9 */
+  -moz-transform:rotate(180deg); /* Firefox */
+  -webkit-transform:rotate(180deg); /* Safari and Chrome */
+  -o-transform:rotate(180deg); /* Opera */
+}
+span.vertical{-ms-transform:rotate(90deg); /* IE 9 */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+  -o-transform:rotate(90deg); /* Opera */}
+  
+  
 .black{color:black;} 
 .blue{color:blue;}  
 .brown{color:brown;} 
@@ -86,6 +109,7 @@ table, tr, td {border-style:none;}
 .green{color:green;} 
 .red{color:red;}
  
+
  
  
  
@@ -94,7 +118,10 @@ table, tr, td {border-style:none;}
  .space{border-bottom: 1px dotted black;}
  .del{text-decoration: line-through;}
  .cancelled{border-bottom: 1px solid black;}
- 
+
+
+span.foreignItalic{font-style:italic;}
+
  
 .w {}
 .add {}
@@ -102,7 +129,6 @@ table, tr, td {border-style:none;}
 .date 
 .desc
 .editor
-.foreign
 .hi
 .imprint
 .label 
@@ -163,7 +189,7 @@ table, tr, td {border-style:none;}
 .cb {}
 .gb {}
 .lb {}
-.milestone {display:block; width:100%; background:#FFF; border-bottom:black 1px solid; height:1px; margin-left:auto; margin-right:auto; padding:2px;} 
+/*.milestone {display:block; width:100%; background:#FFF; border-bottom:black 1px solid; height:1px; margin-left:auto; margin-right:auto; padding:2px;}*/ 
 .pb {display:block;}
 
 .graphic {}

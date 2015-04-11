@@ -63,8 +63,8 @@
         <xsl:comment><xsl:value-of select="$isPaged"/></xsl:comment>
     <xsl:choose>
       <xsl:when test="$isPaged='true' and //jc:page[@n=$pagenumber]"><xsl:apply-templates select="//jc:page[@n=$pagenumber]"/></xsl:when>
-      <xsl:when test="//jc:page[@n=$pagenumber]"><xsl:apply-templates select="//jc:page[@n=$pagenumber]"/></xsl:when>
       <xsl:when test="$isPaged='false'"><xsl:apply-templates select="text"/></xsl:when>
+      <xsl:when test="//jc:page[@n=$pagenumber]"><xsl:apply-templates select="//jc:page[@n=$pagenumber]"/></xsl:when>
       <xsl:otherwise><xsl:apply-templates select="text"/></xsl:otherwise>
     </xsl:choose>
       </div>

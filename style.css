@@ -1,216 +1,438 @@
-body {
-margin-left:auto; 
-margin-right: auto;
-width:70%;
-
-font-family:calibri, arial, helvetica, sans-serif;
+div.transcription{
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+    font-family:calibri, arial, helvetica, sans-serif;
 }
 
-.linenumber {float:right; color:#AAA; margin-right:35%; margin-left:30%; font-size:80%;}
-/**.expan {display:none;}
-.reg {display:none;}
-.corr {display:none;} **/
-.abbr, .expan {border-bottom:1px green dotted}
-.orig, .reg{border-bottom:1px blue dotted}
-.sic, .corr{border-bottom:1px red dotted}
+.linenumber{
+    float:left;
+    color:#AAA;
+    margin-left: -3em;
+    font-size:80%;
+    width:3em;
+}
 
-.pb-title{font-weight:bold;text-align:center;display:block;margin-left:auto;margin-right:auto;}
-p.center{margin-left:auto;margin-right:auto; width:50%; text-align:left;}
-p.right {float:right; clear:both; width: 50%; text-align:left;}
-p{margin-left:5%;}
-p.ab, p.noindent {margin-left:-5%;}
+.expan {display:none;}
+.abbr,
+.expan{
+    border-bottom:1px green dotted
+}
+.orig,
+.reg{
+    border-bottom:1px blue dotted
+}
+.sic,
+.corr{
+    border-bottom:1px red dotted
+}
 
-table, tr, td {border-style:none;}
+.pb-title{
+    font-weight:bold;
+    text-align:center;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+p.center{
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+    text-align:left;
+}
+p.right{
+    float:right;
+    clear:both;
+    width:40%;
+    text-align:left;
+}
+p{
+    margin-left:5%;
+}
+p.ab,
+p.noindent{
+    margin-left:-5%;
+}
+
+table,
+tr,
+td{
+    border-style:none;
+}
 
 
 
 
-.hidden{display:none;}
+.hidden{
+    display:none;
+}
 
 
 /** @rend classes */
- 
-.caps{font-variant: small-caps;} 
-.center{margin-left:auto; margin-right:auto; width: 70%;}  
-.doubleunderline{border-bottom: 3px double;} 
-.quarterline{border-bottom: 1px solid; display:block; width:25%!important; margin-left:0px!important; text-align:left;}
-.doubleline{border-bottom: 3px double; display:block; width:50%;margin-left:auto;margin-right:auto;}
-.tripleline{border-bottom: 3px double;
-	line-height: 1.9em; display:block; width:50%;margin-left:auto;margin-right:auto;} 
-.halfline{border-bottom: 1px solid; display:block; width:50%!important; margin-left:0px!important; text-align:left;} 
-.line{border-bottom: 1px solid #d0d0d0; display:block; width:90%; margin-left:auto;margin-right:auto;}
+
+.caps{
+    font-variant:small-caps;
+}
+.center{
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;
+}
+.doubleunderline{
+    border-bottom:3px double;
+}
+.quarterline{
+    border-bottom:1px solid;
+    display:block;
+    width:25% !important;
+    margin-left:0px !important;
+    text-align:left;
+}
+.doubleline{
+    border-bottom:3px double;
+    display:block;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.tripleline{
+    border-bottom:3px double;
+    line-height:1.9em;
+    display:block;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.halfline{
+    border-bottom:1px solid;
+    display:block;
+    width:50% !important;
+    margin-left:0px !important;
+    text-align:left;
+}
+.line{
+    border-bottom:1px solid #d0d0d0;
+    display:block;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
 
 
-.indent{margin-left:+20%;} 
-.italic{font-style:italic;} 
-.large{font-size:120%;} 
-.left{float:left; margin-left:15%;} 
- 
-.noindent{margin-left:0%;} 
-.other{} 
- 
-.right{float:right; margin-right:15%; width: 50%; text-align:left;} 
+.indent{
+    margin-left:+20%;
+}
+.italic{
+    font-style:italic;
+}
+.large{
+    font-size:120%;
+}
+.left{
+    float:left;
+    margin-left:15%;
+}
 
-.above, .below, .sub, .sup {
-  /* Specified in % so that the sup/sup is the
+.noindent{
+    margin-left:0%;
+}
+.other{
+}
+
+.right{
+    float:right;
+    margin-right:15%;
+    width:50%;
+    text-align:left;
+}
+
+.above,
+.below,
+.sub,
+.sup{
+    /* Specified in % so that the sup/sup is the
      right size relative to the surrounding text */
-  font-size: 75%;
+    font-size:75%;
 
-  /* Zero out the line-height so that it doesn't
+    /* Zero out the line-height so that it doesn't
      interfere with the positioning that follows */
-  line-height: 0;
+    line-height:0;
 
-  /* Where the magic happens: makes all browsers position
+    /* Where the magic happens: makes all browsers position
      the sup/sup properly, relative to the surrounding text */
-  position: relative;
+    position:relative;
 
-  /* Note that if you're using Eric Meyer's reset.css, this
+    /* Note that if you're using Eric Meyer's reset.css, this
      is already set and you can remove this rule */
-  vertical-align: baseline;
+    vertical-align:baseline;
 }
 
-.above, .sup {
-  /* Move the superscripted text up */
-  top: -0.5em;
+.above,
+.sup{
+    /* Move the superscripted text up */
+    top:-0.5em;
 }
 
-.below, .sub {
-  /* Move the subscripted text down, but only
+.below,
+.sub{
+    /* Move the subscripted text down, but only
      half as far down as the superscript moved up */
-  bottom: -0.25em;}
+    bottom:-0.25em;
+}
 
 /**place= above, below, bottom, end, inline, inspace, marginleft, margineright, margintop, marginbottom, top **/
 
-.marginLeft{width:20%; float:left; margin-left:-25%;margin-right:10px; clear:left;  color:red;}
-.marginRight{width:20%; float:right; margin-right:5%; clear:right;  color:red;}
-/* Too difficult for now inside target framework*/
-.marginTop{}
-.marginBottom{}
-
-.small{font-size:80%;} 
-.smallcaps{font-variant: small-caps;} 
-.underline{text-decoration: underline;} 
-.upsidedown{
-  -ms-transform:rotate(180deg); /* IE 9 */
-  -moz-transform:rotate(180deg); /* Firefox */
-  -webkit-transform:rotate(180deg); /* Safari and Chrome */
-  -o-transform:rotate(180deg); /* Opera */
+.marginLeft{
+    width:20%;
+    float:left;
+    margin-left:-25%;
+    margin-right:10px;
+    clear:left;
+    color:red;
 }
-span.vertical{-ms-transform:rotate(90deg); /* IE 9 */
-  -moz-transform:rotate(90deg); /* Firefox */
-  -webkit-transform:rotate(90deg); /* Safari and Chrome */
-  -o-transform:rotate(90deg); /* Opera */}
-  
-  
-.black{color:black;} 
-.blue{color:blue;}  
-.brown{color:brown;} 
-.gray{color:gray;} 
-.green{color:green;} 
-.red{color:red;}
- 
+.marginRight{
+    width:20%;
+    float:right;
+    margin-right:5%;
+    clear:right;
+    color:red;
+}
+/* Too difficult for now inside target framework*/
+.marginTop{
+}
+.marginBottom{
+}
 
- 
- 
- 
- /** elements **/
- 
- .space{border-bottom: 1px dotted black;}
- .del{text-decoration: line-through;}
- .cancelled{border-bottom: 1px solid black;}
+.small{
+    font-size:80%;
+}
+.smallcaps{
+    font-variant:small-caps;
+}
+.underline{
+    text-decoration:underline;
+}
+.upsidedown{
+    -ms-transform:rotate(180deg); /* IE 9 */
+    -moz-transform:rotate(180deg); /* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari and Chrome */
+    -o-transform:rotate(180deg); /* Opera */
+}
+span.vertical{
+    -ms-transform:rotate(90deg); /* IE 9 */
+    -moz-transform:rotate(90deg); /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari and Chrome */
+    -o-transform:rotate(90deg); /* Opera */
+}
 
 
-span.foreignItalic{font-style:italic;}
+.black{
+    color:black;
+}
+.blue{
+    color:blue;
+}
+.brown{
+    color:brown;
+}
+.gray{
+    color:gray;
+}
+.green{
+    color:green;
+}
+.red{
+    color:red;
+}
 
- 
-.w {}
-.add {}
-.address {display:block;}
-.date 
+
+
+
+
+/** elements **/
+
+.space{
+    border-bottom:1px dotted black;
+}
+.del{
+    text-decoration:line-through;
+}
+.cancelled, .strike-through, .strikethrough, .overwritten{
+    text-decoration:line-through;
+    border-bottom:1px solid black;
+}
+
+
+span.foreignItalic{
+    font-style:italic;
+}
+
+
+.w{
+}
+.add{
+}
+.address{
+    display:block;
+}
+.date
 .desc
 .editor
 .hi
 .imprint
-.label 
-.measure 
-.measureGrp 
-.name  
-.addName 
-.forename 
-.geogFeat 
-.geogName  
-.orgName 
-.persName 
-.placeName 
-.roleName 
+.label
+.measure
+.measureGrp
+.name
+.addName
+.forename
+.geogFeat
+.geogName
+.orgName
+.persName
+.placeName
+.roleName
 .surname
 .fw
-.q 
+.q
 .quote
 
 .term
-.note {display:block;}
-.gap 
-.desc 
+.note{display:block;}
+.gap {margin-left:5px; margin-right:5px;}
+.desc
 .gloss
 .seg
-.damage 
+.damage
 .unclear
 
-.monogr 
-.addrLine 
-.author 
-.bibl {display:block;} 
-.biblScope 
-.date 
-.pubPlace 
-.publisher 
+.monogr
+.addrLine
+.author
+.bibl{
+    display:block;
+}
+.biblScope
+.date
+.pubPlace
+.publisher
 .title
 
-.quote {display:block;} 
-.TEI {display:block;}
-.back {display:block;}
-.body {display:block;}
-.p {display:block;}
-.ab {display:block;}
-.closer {display:block;}
-.dateline{display:block;} 
-.div {display:block;}
-.front {display:block;}
+.quote{
+    display:block;
+}
+.TEI{
+    display:block;
+}
+.back{
+    display:block;
+}
+.body{
+    display:block;
+}
+.p{
+    display:block;
+}
+.ab{
+    display:block;
+}
+.closer{
+    display:block;
+}
+.dateline{
+    display:block;
+}
+.div{
+    display:block;
+}
+.front{
+    display:block;
+}
 
 
-.ref, a {text-decoration:none; font-weight:bold; }
+.ref,
+a, a:visited{
+    text-decoration:none;
+    font-weight:bold;
+    color:#AAF;
+}
 
-.head 
+.head
 
-.item {}
-.label {} 
+.item{
+}
+.label{
+}
 
-.cb {}
-.gb {}
-.lb {}
-/*.milestone {display:block; width:100%; background:#FFF; border-bottom:black 1px solid; height:1px; margin-left:auto; margin-right:auto; padding:2px;}*/ 
-.pb {display:block;}
+.cb{
+}
+.gb{
+}
+.lb{
+}
+/*.milestone {display:block; width:100%; background:#FFF; border-bottom:black 1px solid; height:1px; margin-left:auto; margin-right:auto; padding:2px;}*/
+.pb{
+    display:block;
+}
 
-.graphic {}
-.figure {}
-.table, table {} 
-.row, tr {}
-.cell, td {}
-.anchor {}
-.app {}
-.rdg  {display:block;}                         
-.addSpan {}
-.damageSpan {}
-.delSpan {}
-.handShift {}
-.metamark {}
-.mod {}
-.redo {}
-.restore {}
-.retrace {}
-.subst {}
-.supplied {}
-.surplus {}
-.transpose {}
-.undo  {}
+.graphic{
+}
+.figure{
+}
+.table,
+table{
+}
+.row,
+tr{
+}
+.cell,
+td{
+}
+.anchor{
+}
+.app{
+}
+.rdg{
+    display:block;
+}
+.addSpan{
+}
+.damageSpan{
+}
+.delSpan{
+}
+.handShift{
+}
+.metamark{
+}
+.mod{
+}
+.redo{
+}
+.restore{
+}
+.retrace{
+}
+.subst{
+}
+.supplied{
+}
+.surplus{
+}
+.transpose{
+}
+.undo{
+}
+
+div.metadataContainer{
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+    font-family:calibri, arial, helvetica, sans-serif;
+}
+
+table.MODS_metadataTable {width:90%;}
+table.MODS_metadataTable, table.MODS_metadataTable tr td {border:1px black dotted}
+table.MODS_metadataTable tr td.metadataTableLabel {width:20%; text-align:right; padding-right:10px; font-weight:bold;}
+table.MODS_metadataTable tr td.metadataTableData {text-align:left; padding-right:10px; font-weight:normal;}
+

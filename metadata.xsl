@@ -6,15 +6,17 @@
   <xd:doc scope="stylesheet">
     <xd:desc>
       <xd:p><xd:b>Author:</xd:b> James Cummings</xd:p>
-      <xd:p>First attempt at LEAP to HTML conversion</xd:p>
-      <xd:p>Updated in Feb/Mar 2015.</xd:p>
+      <xd:p>LEAP MODS display</xd:p>
+      <xd:p>April 2015.</xd:p>
     </xd:desc>
   </xd:doc>
   <xsl:output method="xml" indent="yes"/>
+<!-- 
+  Run against a lib_111111_MODS.xml file it expects a liv_111111_TEI.xml file in the same directory.
+  -->
 
 
-
-  <!-- When not producing full HTML files, this template could be removed but javascript and CSS will need to be copied to correct location. -->
+  <!-- When not producing full HTML files, this template could be removed. -->
   <xsl:template match="/">
     <html>
       <xsl:comment>This HTML has been generated from an XML original. Do not manually modify this as a source.</xsl:comment>
@@ -32,8 +34,9 @@
     </html>
   </xsl:template>
 
-  <!-- Don't show -->
+  <!-- Main template-->
   <xsl:template match="mods">
+    
     <xsl:variable name="publisherID">
       <xsl:value-of select="normalize-space(identifier[@displayLabel='master_id'][1])"/>
     </xsl:variable>
@@ -42,7 +45,6 @@
     </xsl:variable>
     <xsl:variable name="TEIfile" select="doc($TEIfilename)"/>
 
-    <xsl:variable name="cite">Citation here.</xsl:variable>
 
     <xsl:variable name="title">
       <xsl:apply-templates select="/mods/titleInfo[1]/title[1]"/>
@@ -85,10 +87,15 @@
     <xsl:variable name="repository">
       <xsl:for-each select="relatedItem/name[@type='corporate'][role/roleTerm='repository']">
         <xsl:value-of select="namePart"/>, <xsl:value-of select="ancestor::relatedItem[1]/location/shelfLocator"
-        /><xsl:text>;  </xsl:text>
+        /><xsl:if test="not(position()=last())">
+          <xsl:text>;  </xsl:text>
+        </xsl:if>
       </xsl:for-each>
     </xsl:variable>
     <xsl:variable name="publisher">Livingstone Online. UCLA Digital Library Program, Los Angeles, CA, USA</xsl:variable>
+    
+    <!-- NEEDS TO BE UPDATED WITH THE CORRECT URL. ASSUMING PRETTY URLS ENDING IN ID NUMBER -->
+    
     <xsl:variable name="itemURL">
       <xsl:value-of select="concat('http://www.example.com/files/', $publisherID)"/>
     </xsl:variable>
@@ -123,6 +130,22 @@
         <xsl:value-of select="identifier"/><xsl:if test="not(position()=last())"><xsl:text>;    </xsl:text></xsl:if>
       </xsl:for-each>
     </xsl:variable>
+    <xsl:variable name="citeCreators">
+      <xsl:analyze-string select="$creators" regex="(.*), [0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9];">
+        <xsl:matching-substring><xsl:value-of select="regex-group(1)"/>;</xsl:matching-substring>
+        <xsl:non-matching-substring><xsl:value-of select="."/></xsl:non-matching-substring>
+      </xsl:analyze-string>
+    </xsl:variable>
+    <xsl:variable name="citeTitle" select="$title"/>
+    <xsl:variable name="citeRepository" select="$repository"/>
+    <xsl:variable name="citePublisher" select="$publisher"/>
+    <xsl:variable name="citeURL" select="$itemURL"/>
+    <xsl:variable name="cite"><xsl:value-of select="$citeCreators"/>. <xsl:value-of select="$citeTitle"/>. <xsl:value-of select="$citeRepository"/>. 
+      <xsl:value-of select="$citePublisher"/>. <xsl:value-of select="$citeURL"/> (accessed: <xsl:value-of select="current-date()"/>).
+    </xsl:variable>
+    
+
+
     <div class="metadataContainer">
       <h2>
         <xsl:copy-of select="$title"/>

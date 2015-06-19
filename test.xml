@@ -1,155 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:///home/jamesc/svn/research.it/LEAP/leap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="file:///home/jamesc/svn/research.it/LEAP/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-stylesheet type="text/xsl" href="transcription-jc.xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LETT1353">
-    <teiHeader>
-      <fileDesc>
-            <titleStmt>
-                <title>Letter to Horace Waller</title>
-                <author xml:id="DL">David Livingstone</author>
-            </titleStmt>
-            <publicationStmt>
-                <authority>Livingstone Online</authority>
-                <pubPlace>London, UK</pubPlace>
-                <publisher>University College London</publisher>
-                <date>2012</date>
-            </publicationStmt>
-            <sourceDesc>
-            <bibl xml:id="shelfmark">Bodleian Library of Commonwealth and African Studies at Rhodes House, MSS.Afr.s.16/1, fol. 30-31</bibl>
-            <bibl xml:id="ccnumber">1353</bibl>
-            <bibl xml:id="recipient">Horace Waller</bibl>
-            <bibl xml:id="date">30 May 1863</bibl>
-            <bibl xml:id="where">Unknown</bibl>
-            </sourceDesc>
-        </fileDesc>
-        <profileDesc>
-            <langUsage>
-                <language ident="en">English</language>
-            </langUsage>
-        </profileDesc>
-        <revisionDesc>
-            <change> 
-                <date>2011-12-01</date> 
-                <name xml:id="AJS">A.J. Schmitz</name> initial transcription and XML encoding.
-            </change>
-            <change> 
-                <date>2012-02-04</date> 
-                <name xml:id="JM">Jared McDonald</name> proofreading.
-            </change>
-            <change> 
-                <date>2012-02-04</date> 
-                <name xml:id="AW">Adrian S. Wisnicki</name> editing.
-            </change>
-            <change> 
-                <date>2012-09-25</date> 
-                <name xml:id="HFB">Heather F. Ball</name> second XML editing.
-            </change>
-        </revisionDesc>
-    </teiHeader>
+<!--Converted from a TEI P5 XML file to the LEAP TEI P5 Schema by James Cummings on 2015-03-02-->
+<?xml-model href="http://jamescummings.github.io/LEAP/leap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://jamescummings.github.io/LEAP/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="http://jamescummings.github.io/LEAP/transcription.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="liv_002596"><!--Corrected this to the current letter. Originally read "LETT1422" -Ashanka 5/4/14-->
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Letter to George H. Richards</title>
+				<author xml:id="DL">David Livingstone</author>
+			</titleStmt>
+			<publicationStmt>
+				<authority>Livingstone Online</authority>
+				<pubPlace>Los Angeles, California, USA</pubPlace><!--Spelled out CA -Ashanka 5/4/15-->
+				<publisher>Digital Library Program, University of California, Los Angeles</publisher><!--Corrected this from "UCLA Digital Library" to match previous letters I worked on. Can we discuss which is the correct way to do this for all of the letters? Not sure if this is listed as the "norm" anywhere -Ashanka 5/4/15-->
+				<date>2014</date>
+				<idno type="LEAP-ID">liv_002596</idno>
+			</publicationStmt>
+			<sourceDesc>
+				<bibl xml:id="shelfmark">National Library of Scotland, MS.20312, ff. 167-170</bibl><!-- note that for the fol. number we are no longer using "r" and "v", just the page numbers as per this example. Adrian, I saw this bit after I finished the letter and went back over it. Since we did this part together and then discussed the "r" and "v," I'm assuming that using them is correct. I'm just not sure why this statement is here and we didn't delete it. -->
+				<bibl xml:id="ccnumber">1992</bibl>
+				<bibl xml:id="recipient">George H. Richards</bibl>
+				<bibl xml:id="date">8 February 1872</bibl>
+				<bibl xml:id="where">Ngombe Nullah near Speke's Kazeh</bibl><!-- Where the letter was written -->
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<langUsage>
+				<language ident="en">English</language>
+			</langUsage>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date>2012-12-04</date>
+				<name xml:id="AA">Angela Aliff</name> Initial transcription and XML encoding.
+            
+			</change>
+			<change>
+				<date>2014-04-05</date>
+				<name xml:id="AK">Ashanka Kumari</name> Proofreading and additional XML encoding.
+		
+			</change>
+			<change>
+				<date>2014-04-08</date>
+				<name xml:id="AW">Adrian S. Wisnicki</name> Proofreading and additional XML encoding.
+		
+			</change>
+		</revisionDesc>
+	</teiHeader>
 
-    <text>
-        <body>
-            <div>
-                
-                
-            <pb n="30r"/>
-            <lb n="1"/>
-            <p rend="right">
-               <date when="1863-05-30">Saturday 30 May 
-<lb n="2"/>1863</date>
-            </p>
-              
-              <ab>test ab</ab>
-              
-              <p rend="no-indent">No-indent p</p>
-              
-              <p>In this paragraph theres is some <foreign xml:lang="la">foreign text here</foreign></p>
-              <p>There is an addition here: <add place="marginleft">Some added text in margin left.</add></p>
-              <p>There is an addition here: <add place="marginright">Some added text in margin right.</add></p>
-              <p>There is an addition here: <add place="margintop">Some added text in margin top.</add></p>
-              <p>There is an addition here: <add place="marginbottom">Some added text in margin bottom.</add></p>
-              
-            <lb n="3"/>
-            <p>My Dear <persName>
-                  <choice>
-                     <abbr>HW</abbr>
-                     <expan>Horace Waller</expan>
-                  </choice>
-               </persName>
-            </p>
-              <milestone unit="line" rend="half-line"/>
-              <p>There is an addition here: <add place="margintop">Some more added text in margin top.</add></p>
-            <lb n="4"/>
-            <p>We send 
-<lb n="5"/>back the books with  
-<lb n="6"/>many thanks for 
-<lb n="7"/>the use <space extent="5" unit="chars"/>of them. 
-<lb n="8"/>they are somewhat 
-<lb n="9"/>damaged <space extent="5" unit="words"/> by cockroaches
-<lb n="10"/>and one is not 
-<lb n="11"/>at hand, possibly 
-<lb n="12"/>it may hence gone 
-<lb n="13"/>down - I mean 
-<lb n="14"/>the volume of "All 
-<lb n="15"/>the year round<supplied>"</supplied> 
+	<text>
+		<body>
+			<div>
 
-<hi rend="upsidedown">For some reason there is some vertical text here.</hi>
-               <pb n="30v"/>
-               <lb n="1"/>I retain <persName>Keble</persName> for 
-<lb n="2"/>a little longer.</p>
-            <lb n="3"/>
-            <p>I am sorry that 
-<lb n="4"/>you did not 
-<lb n="5"/>succeed according 
-<lb n="6"/>to all our wishes 
-<lb n="7"/>and your own 
-<lb n="8"/>I guess you uttered 
-<lb n="9"/>some of your 
-<lb n="10"/>terrific puns on 
-<lb n="11"/>the way &amp; made 
-<lb n="12"/>
-               <persName>Procter</persName> ill. I 
-<lb n="13"/>escaped relapse 
-<lb n="14"/>myself by holding 
+	<pb n="0001" facs="liv_002596_0001"><!--pb/@n='167r'--></pb>
 
-    <pb n="31r"/>
-               <lb n="1"/>in my breath as 
-<lb n="2"/>I read them. send 
-<lb n="3"/>a few more I wish 
-<lb n="4"/>to try if they will 
-<lb n="5"/>exorcise the cockroaches 
-<lb n="6"/>Better luck next 
-<lb n="7"/>time for you all 
-<lb n="8"/>I hope <persName>Meller</persName> will 
-<lb n="9"/>cure <persName>Procter</persName> as 
-<lb n="10"/>quickly as he did 
-<lb n="11"/>his own case. 
-<lb n="12"/>Yesterday for 
-<lb n="13"/>the first time 
-<lb n="14"/>I walked a little 
+<lb/><p><placeName><settlement type="village">Ngombe Nullah</settlement></placeName> near
+<lb/><persName>Speke</persName>'s <placeName><settlement type="village">Kazeh</settlement></placeName><date when="1872-02-08">8<hi rend="sup underline">th</hi><choice><abbr>Feby</abbr><expan>February</expan></choice>
+<lb/><space dim="horizontal" extent="3" unit="words"/>1872</date></p>
+<lb/><p>My Dear <persName>Captain Richards</persName></p>
+<lb/><p>My letters to you
+<lb/>have been destroyed
+<lb/>because I have been
+<lb/>looked upon as a spy
+<lb/>on the <placeName><region>Zanzibar</region></placeName> slave
+<lb/>trade so you must
+<lb/>kindly make allowances
+<lb/>for my long silence -
+<lb/><persName>M<hi rend="sup">r</hi> Stanley</persName> an <term type="nationality">American</term><!--Inserted the nationality tag for "American" -Ashanka 5/4/15-->
+<lb/>gentleman takes this
+<lb/>to the coast so I repeat
+<lb/>my thoughtfulness to
+<lb/>you for all you did
+<lb/>in <persName>Young</persName>'s Expedition
+<lb/>and otherwise - </p>
 
-    <pb n="31v"/>
-               <lb n="1"/>without feeling as 
-<lb n="2"/>if I should faint 
-<lb n="3"/>this may be the 
-<lb n="4"/>effects of the iron 
-<lb n="5"/>which I have taken 
-<lb n="6"/>three times.</p> 
-            <lb n="7"/>
-            <p>With good wishes 
-<lb n="8"/>for you all I am &amp;c</p>
-            <lb n="9"/>
-            <p rend="center">
-               <persName>
-                  <choice>
-                     <abbr>DL</abbr>
-                     <expan>David Livingstone</expan>
-                  </choice>
-               </persName> His Mark <!-- here DL draws a little Cross AJS 12/1 --></p>
+	<pb n="0002" facs="liv_002596_0002"><!--pb/@n='167v'--></pb>
 
+<lb/><p>My work would have
+<lb/>been finished long ago
+<lb/>but <hi rend="underline">from</hi> grievance of
+<lb/>the situtation <persName> D<hi rend="sup underline">r</hi> Kirk</persName>
+<lb/>handed over the matter
+<lb/>of supplies &amp; men to 
+<lb/><persName>Ludha</persName> a <choice><sic>Bannian</sic><corr>Banian</corr></choice> slave <!--added "a" before "Banian" as per the image of letter. -Ashanka 5/4/15-->
+<lb/>trader and he entrusted
+<lb/>his slaves who curiously
+<lb/>enough all had the idea
+<lb/>that they were not to
+<lb/>follow but force me
+<lb/>back - £500 were thus
+<lb/>squandered and again
+<lb/>another £500 was placed
+<lb/>in <persName>Ludha</persName>'s hands. &amp;
+<lb/>I am now going East
+<lb/>to catch the relics of
+<lb/>the second £500 worth
+<lb/>of goods from the slaves
+<lb/>who like jolly fellows
+<lb/>have been feasting on
 
-            </div>
-        </body>
-    </text>
+        
 
-</TEI>
+	<pb n="0003" facs="liv_002596_0003"><!--pb/@n='168r'--></pb>
+
+<lb/>on them for 14 months
+<lb/>the loss inflicted on 
+<lb/>me is over 2 years
+<lb/>in time. 1800 miles
+<lb/>of tramp and nearly
+<lb/>£1000 in money - 
+<lb/>but I hope to get over 
+<lb/>it all - You will
+<lb/>have learned before
+<lb/>this that the <placeName><geogName type="river">Nile</geogName></placeName>
+<lb/>rises in 10°-12° South
+<lb/>When this became
+<lb/>known it is said to
+<lb/>have been awarded
+<lb/>to <persName>Beke</persName><supplied cert="high">,</supplied><persName>Finlay</persName><supplied cert="high">,</supplied> and <!--Not sure where the commas are coming from. I don't see them in the image. Should they be omitted? -Ashanka 5/4/15-->
+<lb/><persName>Arrowsmith</persName> because
+<lb/>they dreamed about
+<lb/>it - this is interesting
+<lb/>for as my Despatches
+<lb/>will <choice><orig>shew</orig><reg>show</reg></choice> you the
+<lb/>watershed from which
+<lb/>the <placeName><geogName type="river">Nile</geogName></placeName> arises is
+
+        
+
+	<pb n="0004" facs="liv_002596_0004"><!--pb/@n='168v'--></pb>
+
+<lb/><choice><sic>is</sic><corr/></choice> some 700 miles long
+<lb/>and to be fair the dreamers
+<lb/>must have awarded to
+<lb/>them also the discovery
+<lb/>of division of labour
+<lb/>in dreaming - Each to
+<lb/>get 233 miles = Discovery
+<lb/>to me means very hard
+<lb/>work and the work is
+<lb/>not yet finished - I 
+<lb/>go West again to the
+<lb/>Western or seventh
+<lb/>hundred miles of the 
+<lb/>watershed where the
+<lb/>four fountains are
+<lb/>separated to the West
+<lb/>possibly are the sources
+<lb/>mentioned long ago
+<lb/>to <persName>Herodotus</persName> - I wish
+<lb/>I could settle them in
+<lb/>a good long <choice><sic>snoose</sic><corr>noose</corr></choice> -
+
+        
+
+	<pb n="0005" facs="liv_002596_0005"><!--pb/@n='169r'--></pb>
+
+<lb/>The fountains are almost
+<lb/>innumerable and all
+<lb/>converge into large
+<lb/>rivers and Lakes in
+<lb/>the great <placeName><geogName type="river">Nile</geogName></placeName> really
+<lb/>a perpetual slope so
+<lb/>far as I have seen it
+<lb/>and no "<placeName><geogName type="river">Upper Nile</geogName></placeName>
+<lb/>basin" at all and I
+<lb/>reached the level
+<lb/>ascribed to <placeName><settlement type="village">Gondokoro</settlement></placeName>
+<lb/>It goes through the 
+<lb/>country of the cannibals
+<lb/>called <placeName><region>Manyuema</region></placeName>
+<lb/>The slave trade lately
+<lb/>began there as not
+<lb/>trading in any sense
+<lb/>it is simply cold
+<lb/>blooded murder and 
+<lb/>it is all carried on
+
+        
+
+	<pb n="0006" facs="liv_002596_0006"><!--pb/@n='169v'--></pb>
+
+<lb/>by the money of <persName>Ludha</persName>
+<lb/>and other <term type="tribe">Banian</term> English
+<lb/>subjects who though
+<lb/>they dare not kill a
+<lb/>gnat or flea are really
+<lb/>and truly the very
+<lb/>worst cannibals in
+<lb/>all <placeName><bloc>Africa</bloc></placeName> - The money all comes from them
+<lb/>and they manage <choice><sic>adrotitly</sic><corr>adroitly</corr></choice>
+<lb/>to let the odium rest
+<lb/>on their Arab agents -</p>
+<lb/><p>I transmit by <persName> M<hi rend="sup underline">r</hi>
+<lb/>Stanley</persName> two pocket
+<lb/>chronometers and two <!--corrected typo "chonometers" to "chronometers" as per the images. -Ashanka 5/4/15-->
+<lb/>common watches - 
+<lb/>all are dead though no
+<lb/>accident befel any of
+<lb/>my instruments except
+<lb/>some by shipwreck
+
+        
+
+	<pb n="0007" facs="liv_002596_0007"><!--pb/@n='170r'--></pb>
+
+<lb/>which were going to be
+<lb/>put in depot in case
+<lb/>of those I took with me
+<lb/>being lost. I retain
+<lb/>one <add place="below">^</add><add place="above">dead</add> chronometer to
+<lb/>try if I can get a <w>longi<add place="inline">-</add><lb break="no"/>-tude</w> by putting a
+<lb/>weight on the key and
+<lb/>observing successive
+<lb/>sun's <choice><abbr>alts</abbr><expan cert="high">altitudes</expan></choice> - and moon's
+<lb/>distances. The watches
+<lb/>I trouble you with
+<lb/>because you have
+<lb/>superior workmen
+<lb/>one was dipped in
+<lb/>water and I filled
+<lb/>it with oil to preserve
+<lb/>it - The other had
+<lb/>second stop hands
+<lb/>but too small -
+
+        
+
+	<pb n="0008" facs="liv_002596_0008"><!--pb/@n='170v'--></pb>
+
+<lb/>If you can favour
+<lb/>me by allowing your
+<lb/>workmen to put a
+<lb/>new dial &amp; larger
+<lb/>second face on it. I
+<lb/>shall feel greatly
+<lb/>obliged - It is a very
+<lb/>good watch but too
+<lb/>small - I am hoping
+<lb/>to get the Aneroids
+<lb/>back to the sea to
+<lb/>test them there again
+<lb/>one has altered
+<lb/>considerably.
+</p><lb/><p rend="center">very sincerely yours</p>
+<lb/><p rend="center"><persName>David Livingstone</persName></p>
+<lb/><p rend="center"><choice><abbr>H.M.</abbr><corr>Her Majesty's</corr></choice> consul.</p>
+			
+</div>
+		</body>
+	</text></TEI>
